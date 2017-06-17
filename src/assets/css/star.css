@@ -1,0 +1,19 @@
+  .star {
+    display: flex;
+    justify-content: space-between;
+  }
+  .star .star-item {
+    background-repeat: no-repeat;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: 1.2rem auto;
+  }
+  .star .star-item.on {
+    background-image: url('../imgs/star48_on@2x.png');
+  }
+   .star .star-item.off {
+    background-image: url('../imgs/star48_off@2x.png');
+  }
+   .star .star-item.half {
+    background-image: url('../imgs/star48_half@2x.png');
+  }
