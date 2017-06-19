@@ -5,7 +5,9 @@
       <router-link tag="a" to="/ratings">评论</router-link>
       <router-link tag="a" to="/seller">商家</router-link>
     </div>
-    <router-view :seller="seller"></router-view>
+    <keep-alive>
+      <router-view :seller="seller"></router-view>
+    </keep-alive>
   </div>
 </template>
 <script>

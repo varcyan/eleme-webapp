@@ -1,0 +1,38 @@
+.cart-control {
+  font-size: 0;
+}
+.cart-control .cart-item {
+  display:  inline-block;
+  vertical-align: top;
+  transition: .5s;
+  font-size: 1.2rem;
+}
+.cart-control .cart-item .inner {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.2rem;
+  transition: all .4s;
+}
+.cart-decrease .inner {
+  /*transform: rotate(90deg);*/
+}
+.move-enter, .move-leave-to {
+  opacity: 0;
+  transform:  translate3d(1.2rem, 0, 0);
+}
+.move-enter .inner, .move-leave-to .inner {
+  transform: rotate(180deg);
+}
+.cart-control .cart-item.cart-count {
+  font-size: .5rem;
+  color: rgb(147, 153, 159);
+  line-height: 1.2rem;
+  width: 1.2rem;
+  text-align: center;
+  height: 1.2rem;
+  margin-top: .3rem;
+}
+.cart-control .cart-decrease, .cart-control .cart-add {
+  padding: .3rem;
+  color: #00a0dc;
+}

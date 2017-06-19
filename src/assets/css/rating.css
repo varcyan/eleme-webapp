@@ -1,0 +1,60 @@
+.cm-type {
+  margin-top: .9rem;
+  height: 1.625rem;
+  margin-bottom: .9rem;
+}
+.cm-type .cm-type-item {
+  float: left;
+  margin-right: .4rem;
+  font-size: .6rem;
+  line-height: 1.625rem;
+  padding: 0 .6rem;
+  border-radius: .1rem;
+}
+.cm-type .cm-type-item:last-child {
+  margin-right: none;
+}
+.cm-type .cm-type-item.all.active,.cm-type .cm-type-item.good.active{
+  background-color: rgb(0,160,220);
+  color: #fff;
+}
+.cm-type .cm-type-item.all,.cm-type .cm-type-item.good {
+  background-color: #ccecf8;
+  color: rgb(77,85,93);
+}
+.cm-type .cm-type-item.bad {
+  background-color: rgba(77,85,93,.2);
+  color: rgb(77,85,93);
+}
+.cm-type .cm-type-item.bad.active {
+  background-color: rgb(77,85,93);
+  color: #fff;
+}
+.cm-type .cm-type-item .num {
+  font-size: .4rem;
+  line-height: .4rem;
+  margin-left: .15rem;
+}
+.switch {
+  padding: .6rem;
+  border-top: 1px solid rgba(7,17,27,.1);
+  font-size: 0;
+}
+.switch .text {
+  font-size: .6rem;
+  color: rgb(147, 153, 159);
+}
+.switch .icon {
+  margin-top: .2rem;
+  margin-right: .2rem;
+}
+.switch .icon::before {
+  position: relative;
+  top: .15rem;
+  color: #b7bbbf;
+  font-size: 1rem;
+}
+.switch .icon.active::before {
+  color: rgb(0,160,220);
+}
+

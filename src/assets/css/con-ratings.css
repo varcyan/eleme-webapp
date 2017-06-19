@@ -1,0 +1,141 @@
+.comments {
+  position: absolute;
+  top: 8.825rem;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background-color: #f3f5f7;
+}
+.comments-content {
+  /*height: 2000px;*/
+}
+.comments-wrap {
+  width: 100%;
+}
+.comments .overview {
+  border-bottom: .05rem solid rgba(7,17,27,.1);
+  border-top: .05rem solid rgba(7,17,27,.1);
+  margin-bottom: .8rem;
+  background-color: #fff;
+}
+.comments .o-fir {
+  display: flex;
+  padding: .9rem 1.2rem .9rem 0;
+}
+.comments .o-fir .overview-left {
+  width: 6.875rem;
+  border-right: 1px solid rgba(7,17,27,.1);
+  text-align: center;
+  padding: .3rem 0;
+}
+.o-fir .overview-right {
+  width: 10.65rem;
+  padding-left: 1.2rem;
+
+}
+.o-fir .overview-left .score {
+  font-size: 1.2rem;
+  color: rgb(255,153,0);
+  line-height: 1.4rem;
+  margin-bottom: .3rem;
+}
+.o-fir .overview-left .score-desc {
+  font-size: .6rem;
+  color: rgb(7,17,27);
+  line-height: .6rem;
+  margin-bottom: .4rem;
+}
+.o-fir .overview-left .score-diff {
+  line-height: .5rem;
+  font-size: .5rem;
+  color: rgb(147, 153 ,159);
+}
+.overview-right .score-wrapper {
+  display: flex;
+}
+.score-wrapper .title {
+  font-size: .6rem;
+  color:rgb(7,17,27);
+  line-height: .9rem;
+  margin-bottom: .4rem;
+  margin-right: .6rem;
+}
+.score-wrapper .title:last-child {
+  margin-bottom: 0;
+}
+.score-wrapper .star-wrapper {
+  width: 4.95rem;
+  padding-right: .6rem;
+}
+.score-wrapper .star-wrapper .star .star-item {
+  width: .7rem;
+  height: .7rem;
+}
+.score-wrapper .score-text {
+  font-size: .6rem;
+  color: rgb(255,153,0);
+  line-height: .9rem; 
+}
+.score-wrapper .send-time {
+  font-size: .6rem;
+  color: rgb(147, 153 ,159);
+  line-height: .9rem;
+}
+.o-rate {
+  padding: 0 .9rem;
+}
+.rates-wrapper .rates-item {
+  position: relative;
+  display: flex;
+  padding: .9rem 0;
+  border-bottom: 1px solid rgba(7,17,27,.1);
+}
+.rates-item .avatar {
+  flex: 0 0 1.4rem;
+  margin-right: .6rem;
+}
+.rates-item .avatar img {
+  border-radius: 50%;
+}
+.rates-item .content {
+  flex: 1;
+}
+.o-rate .switch {
+  padding-left: 0;
+}
+.rates-item .content .name {
+  font-size: .5rem;
+  color: rgb(7,17,27);
+  line-height: .6rem;
+  margin-bottom: 8;
+}
+.cdesc .star-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 3.1rem;
+  margin-bottom: .3rem;
+}
+.cdesc .star-wrapper .star-item {
+  width: .5rem;
+  height: .5rem;
+}
+.cdesc .star-wrapper .sendTime {
+  font-size: .5rem;
+  font-weight: 200;
+  line-height: .6rem;
+}
+.rates-item .content .text {
+  font-size: .6rem;
+  color: rgb(7,17,27);
+  line-height: .9rem;
+}
+.rates-item .content .time {
+  position: absolute;
+  right: 0;
+  top: .9rem;
+  font-size: .5rem;
+  font-weight: 200;
+  color: rgb(147, 153 ,159);
+  line-height: .6rem;
+}

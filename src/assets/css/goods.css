@@ -83,6 +83,7 @@
 .food-item .content {
   flex: 1;
   max-width: 9.55rem;
+  position: relative;
 }
 .food-item .content .name {
   font-size: .7rem;
@@ -114,4 +115,9 @@
   font-size: .5rem;
   color: rgb(147, 153, 159);
   text-decoration: line-through;
+}
+.food-item .cartcontrol-wrap {
+  position: absolute;
+  right: 0;
+  bottom: -.375rem;
 }

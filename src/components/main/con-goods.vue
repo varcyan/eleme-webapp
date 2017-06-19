@@ -18,7 +18,8 @@
         <li v-for="item in goods" class="food-list food-list-hook">
           <h3 class="title">{{ item.name }}</h3>
           <ul class="foodlist-wrap">
-            <li v-for="food in item.foods" class="food-item">
+            <li v-for="food in item.foods" class="food-item"
+            @click="selectFood(food,$event)">
               <div class="icon">
                 <img :src="food.icon">
               </div>
@@ -33,22 +34,33 @@
                   <span>￥{{ food.price }}</span>
                   <span class="old-price" v-show="food.oldPrice">￥{{ food.oldPrice }}</span>
                 </div>
+                <div class="cartcontrol-wrap">
+                  <cartcontrol :food="food"
+                  v-on:touchadd="cartadd"></cartcontrol>
+                </div>
               </div>
             </li>
           </ul>
         </li>
       </ul>
     </div>
-    <shopcar :delivery="seller.deliveryPrice" :min-price="seller.minPrice"></shopcar>
+    <shopcar :select-foods="selectFoods" :delivery="seller.deliveryPrice" 
+    :min-price="seller.minPrice"
+    ref="shopcar"></shopcar>
+    <foodview :food="selected" ref="foodview"></foodview>
   </div>
 </template>
 <script>
 import shopcar from '@/components/main/shopcar'
+import foodview from '@/components/main/food'
+import cartcontrol from '@/components/main/cart-control'
 import BScroll from "better-scroll"
 const ERR_OK = 0;
 export default {
   components: {
-    shopcar
+    shopcar,
+    cartcontrol,
+    foodview
   },
   props: {
     seller: {
@@ -59,7 +71,8 @@ export default {
     return {
       goods: [],
       listHeight: [],  // 每个列表的高度
-      scrollY: 0
+      scrollY: 0,
+      selected: {}
     }
   },
   computed: {
@@ -73,6 +86,17 @@ export default {
         }
       }
       return 0;
+    },
+    selectFoods () {
+      let foods = [];
+      this.goods.forEach ((item) => {
+        item.foods.forEach ((food) => {
+          if (food.count) {
+            foods.push(food);
+          }
+        })
+      })
+      return foods;
     }
   },
   created () {
@@ -93,11 +117,13 @@ export default {
   methods: {
     initScroll () {
       this.menuScroll = new BScroll (document.getElementById('menu-wrap-hook'), {
-        click: true   // 允许事件
+        click: true,   // 允许事件
+        momentumLimitDistance: 8
       })
       this.foodsScroll = new BScroll (document.getElementById('foods-wrap-hook'), {
         click: true, 
-        probeType: 3  // 可以拿到滚动的数值
+        probeType: 3,  // 可以拿到滚动的数值
+        momentumLimitDistance: 8
       })
       // 监听滚动
       this.foodsScroll.on('scroll', (pos) => {
@@ -123,6 +149,20 @@ export default {
       let foodList = document.getElementById('foods-wrap-hook').querySelectorAll('.food-list-hook');
       let el = foodList[index];
       this.foodsScroll.scrollToElement(el, 300);
+    },
+    balldrop (target) {
+      // console.log(this.$refs.shopcart)
+      // this.$refs.shopcart.drop(target);
+    },
+    cartadd (target) {
+      this.balldrop(target);
+    },
+    selectFood (food, event) {
+      if (!event._constructed) {
+        return;
+      }
+      this.selected = food;
+      this.$refs.foodview.show();
     }
   }
 }

@@ -1,0 +1,166 @@
+.foodview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 2.4rem;
+  z-index: 30;
+  background-color: #f3f5f7;
+  width: 100%;
+}
+.fly-enter-active, .fly-leave-active {
+  transition: all .5s
+}
+.fly-enter, .fly-leave-to /* .fade-leave-active in <2.1.8 */ {
+  transform: translate3d(100%, 0, 0);
+}
+.fview {
+  /*padding-bottom: 2.4rem;*/
+}
+.fview-img-header {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+.fview-img-header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fview-img-header .back {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+}
+.fview-img-header .icon-arrow_lift::before {
+  display: block;
+  padding: .5rem;
+  color: #fff;
+}
+.fview .fview-seller {
+  border-top: none;
+  position: relative;
+}
+.fview-item {
+  padding: .9rem;
+  border-bottom: 1px solid rgba(7,17,27,.1);
+  border-top: 1px solid rgba(7,17,27,.1);
+  background-color: #fff;
+  margin-bottom: .8rem;
+}
+.fview-seller .f-title {
+  font-weight: 700;
+}
+.fview-seller .f-detail {
+  font-size: 0;
+  margin-bottom: .9rem;
+}
+.fview-seller .f-sell-count, .fview-seller .f-rating {
+  color: rgb(147,153,159);
+  line-height: .5rem;
+  font-size: .5rem;
+}
+.fview-seller .f-sell-count {
+  margin-right: .6rem;
+}
+.fview-seller .f-price {
+  line-height: 1.2rem;
+  font-weight: 700;
+}
+.fview-seller .f-price .new {
+  color: rgb(240, 20, 20);
+  font-size: .7rem;
+}
+.fview-seller .f-price .old {
+  font-size: .5rem;
+  color: rgb(147,153,159);
+  text-decoration: line-through;
+}
+.shopgo {
+  position: absolute;
+  right: .9rem;
+  bottom: .5rem;
+  width: 6.9rem;
+  height: 1.725rem;
+}
+.shopgo .shopgo-item {
+  position: absolute;
+  right: 0;
+}
+.shopgo .fv-buy {
+  width: 3.7rem;
+  color: #fff;
+  background-color: rgb(0,160,220);
+  line-height: 1.2rem;
+  height: 1.2rem;
+  font-size: .5rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  margin-top: .3rem;
+}
+.fview-item .f-title {
+  font-size: .7rem;
+  color: rgb(7, 17, 27);
+  line-height: .7rem;
+  margin-bottom: .4rem;
+}
+.fview-intro .f-detail {
+  font-size: .6rem;
+  font-weight: 200;
+  color: rgb(77,85,93);
+  line-height: 1.2rem;
+  padding: 0 .4rem;
+}
+.rating-wrapper {
+  padding: 0 .45rem;
+}
+.rating-wrapper .rating-item {
+  border-bottom: 1px solid rgba(7,17,27,.1);
+  position: relative;
+  padding: .8rem 0;
+}
+.rating-item .user {
+  position: absolute;
+  right: 0;
+  top: .8rem;
+  line-height: .6rem;
+  font-size: 0;
+}
+.rating-item .user .user-name {
+  display: inline-block;
+  vertical-align: top;
+  font-size: .5rem;
+  color: rgb(147,153,159);
+  margin-right: .3rem;
+}
+.rating-item .user .user-img {
+  border-radius: 50%;
+  vertical-align: top;
+}
+.rating-item .time {
+  font-size: .5rem;
+  color: rgb(147,153,159);
+  line-height: .6rem;
+  margin-bottom: .3rem;
+}
+.rating-item .text {
+  font-size: .6rem;
+  line-height: .8rem;
+  color: rgb(7, 17, 27);
+}
+.rating-item .icon-thumb_up,.rating-item .icon-thumb_down {
+  margin-right: .2rem;
+}
+.rating-item .icon-thumb_up {
+  color: rgb(0,160,220);
+}
+.rating-item .icon-thumb_down {
+  color: rgb(147,153,159);
+}
+.no-rating {
+  padding: .75rem;
+  text-align: center;
+  font-size: .6rem;
+  color: rgb(147,153,159);
+}

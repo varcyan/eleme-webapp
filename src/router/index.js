@@ -13,6 +13,11 @@ import base from 'assets/css/base'
 import star from 'assets/css/star'
 import goods from 'assets/css/goods'
 import shopcar from 'assets/css/shopcar'
+import cartControl from 'assets/css/cart-control'
+import foodCss from 'assets/css/food'
+import ratingCss from 'assets/css/rating'
+import conratingsCss from 'assets/css/con-ratings'
+import consellerCss from 'assets/css/con-seller'
 
 export default new Router({
   linkActiveClass: 'active',
